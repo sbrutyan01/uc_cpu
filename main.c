@@ -14,14 +14,18 @@ int main(void)
 
     and_gate(a, b, wire);
 
-    mux(1, a, b, wire);
+    
 
     for (int i = 0; i < NIBBLE; i++ ) {
         printf("Y is: %d\n", wire[i]);
     }
 
+    b[0] = 0;
+
+    mux(1, a, b, wire);
+
     for (int i = 0; i < NIBBLE; i++ ) {
-        printf("A is: %d\n", wire[i]);
+        printf("Mux output is: %d\n", wire[i]);
     }
 
 return 0;
