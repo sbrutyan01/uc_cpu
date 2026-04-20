@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include "std_logic_gates/std_logic_gates.h"
 
 #define NIBBLE  4
 #define BYTE    8
@@ -31,7 +32,5 @@ return 0;
 }
 
 void and(bool a[NIBBLE], bool b[NIBBLE]) {
-    for (int i = 0; i < NIBBLE; i++) {
-        wire[i] = a[i] & b[i];
-    }
+    and_gate(a, b, wire);
 }
